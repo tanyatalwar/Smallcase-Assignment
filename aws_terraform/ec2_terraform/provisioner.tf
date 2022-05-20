@@ -3,7 +3,7 @@
 
     connection {
       type        = "ssh"
-      user        = "ubuntu"
+      user        = "ec2-user"
       private_key = "${file("keys/mykeypair")}"
     }
   }
