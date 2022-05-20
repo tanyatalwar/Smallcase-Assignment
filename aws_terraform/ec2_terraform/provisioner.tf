@@ -9,5 +9,5 @@
   }
 
   provisioner "local-exec" {
-    command = "ansible-playbook -u ubuntu -i '${self.public_ip},' --private-key ${file("keys/mykeypair")} provision.yml" 
+    command = "ansible-playbook -u ec2-user -i '${self.public_ip},' --private-key ${file("keys/mykeypair")} provision.yml" 
   }
